@@ -23,3 +23,23 @@ let device = {
 };
 console.log(`${device.productName} with ${device.memory[1]} memory is available at ${device.isAvailableAt[0]}.`);
 document.getElementById("iphone").innerText = `${device.productName} with ${device.memory[1]} memory is available at ${device.isAvailableAt[0]}.`;
+
+// bookshelf
+let bookshelf = [
+    {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        yearPublished: 1925
+    },
+    {
+        title: "To Kill a Mockingbird",
+        author: "Harper Lee",
+        yearPublished: 1960
+    },
+    {
+        title: "Crime and Punishment",
+        author: "Fyodor Dostoevsky",
+        yearPublished: 1866
+    }
+];
+console.log(bookshelf)
