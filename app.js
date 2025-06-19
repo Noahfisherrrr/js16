@@ -1,3 +1,4 @@
+
 // numbers with sum and average
 let numbers = [11, 22, 33, 44, 55];
 let sum = 0;
@@ -25,21 +26,39 @@ console.log(`${device.productName} with ${device.memory[1]} memory is available 
 document.getElementById("iphone").innerText = `${device.productName} with ${device.memory[1]} memory is available at ${device.isAvailableAt[0]}.`;
 
 // bookshelf
+
+
 let bookshelf = [
     {
         title: "The Great Gatsby",
         author: "F. Scott Fitzgerald",
-        yearPublished: 1925
+        yearPublished: 1925,
+        cover: "img/thegg.jpg"
     },
     {
         title: "To Kill a Mockingbird",
         author: "Harper Lee",
-        yearPublished: 1960
+        yearPublished: 1960,
+        cover: "img/tkam.jpg"
     },
     {
         title: "Crime and Punishment",
         author: "Fyodor Dostoevsky",
-        yearPublished: 1866
+        yearPublished: 1866,
+        cover: "img/crime.jpeg"
     }
 ];
+const container = document.getElementById("bookshelf");
+
+  bookshelf.forEach(book => {
+    let card = `
+      <div class="book-card">
+        <img src="${book.cover}" alt="${book.title}">
+        <p><strong>${book.title}</strong>
+        ${book.author}<br>
+        (${book.yearPublished})</p>
+      </div>
+    `;
+    container.innerHTML += card;
+  });
 console.log(bookshelf)
